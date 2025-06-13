@@ -1,0 +1,40 @@
+
+---
+import type { ACTION_ERROR_CODES } from "astro:actions"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+  {
+    date: 'Abril 2025',
+    title: 'Full Stack Software Developer',
+    description: 
+    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
+    link: 'https://www.linkedin.com/in/emabarboza/'
+  },
+  {
+    date: 'Abril 2025',
+    title: 'Full Stack Software Developer',
+    description: 
+    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
+    link: 'https://www.linkedin.com/in/emabarboza/'
+  },
+  {
+    date: 'Abril 2025',
+    title: 'Full Stack Software Developer',
+    description: 
+    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
+    link: 'https://www.linkedin.com/in/emabarboza/'
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">   
+  {
+    EXPERIENCE.map(experience => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience}/>
+      </li>
+    ))
+  }               
+</ol>
+
