@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+@import "tailwindcss-animated";
+
+@import "@midudev/tailwind-animations";

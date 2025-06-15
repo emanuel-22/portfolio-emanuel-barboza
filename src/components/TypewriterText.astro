@@ -1,0 +1,29 @@
+---
+// src/components/Typewriter.astro
+---
+
+<div id="typewriter" ></div>
+
+<script >
+  import Typewriter from 'typewriter-effect/dist/core';
+
+  const el = document.getElementById('typewriter');
+
+  if (el) {
+    const typewriter = new Typewriter(el, {
+      loop: true,
+      delay: 70,
+      deleteSpeed: 50,
+    });
+
+    typewriter
+      .typeString('Soy un Informático Argentino 💻')
+      .pauseFor(1500)
+      // .deleteAll()
+      // .typeString('Soy Licenciado en Análisis de Sistemas 💻')
+      // .pauseFor(1500)
+      .start();
+  }
+</script>
+
+
