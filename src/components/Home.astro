@@ -1,0 +1,62 @@
+---
+import Badge from '../components/Badge.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedinIcon from '../icons/LinkedinIcon.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import GmailIcon from '../icons/GmailIcon.astro';
+---
+
+<div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto px-4 py-12">
+  <!-- Imagen a la izquierda -->
+  <img 
+    class="size-63 rounded-full object-cover overflow-hidden border-4 border-red-600/50 dark:border-gray-400" 
+    src="https://media.licdn.com/dms/image/v2/D4D03AQHAQhRn-Ru_kw/profile-displayphoto-shrink_400_400/B4DZaGnCKbHQAg-/0/1746015102108?e=2147483647&v=beta&t=JD5La1ReCgFSIfqRnXJUPsu1gl2rIW9tFYClFiM-b9Y" 
+    alt="My profile photo" 
+  />
+
+  <!-- Texto a la derecha -->
+  <div>
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-4 pb-6">
+      Hola 👋, soy Emanuel Barboza
+      <a 
+        href="https://www.linkedin.com/in/emabarboza/"
+        target="_blank"
+        rel="noopener"
+        class="flex justify-center items-center">
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+    </h1>
+
+    <h2 class="text-xl lg:text-2xl opacity-80 pb-4 max-w-[700px]">
+      
+      <span class="text-yellow-200/90">
+        Soy un Informático Argentino 👩‍💻🇦🇷,
+      </span> 
+      <span class="opacity-80">
+        con especialización en Agilidad aplicadas en el Desarrollo de Software.
+      </span>  
+    </h2>
+
+    <nav class="flex gap-4 flex-wrap">
+      <SocialPill href="https://www.linkedin.com/in/emabarboza/">
+        <LinkedinIcon class="size-4 md:size-6"/>
+        Linkedin
+      </SocialPill>
+
+      <SocialPill href="https://github.com/emanuel-22">
+        <GithubIcon class="size-4 md:size-6"/>
+        Github
+      </SocialPill>
+
+      <SocialPill href="mailto:emanuelbarboza5@gmail.com">
+        <GmailIcon class="size-4 md:size-6"/>
+        emanuelbarboza5@gmail.com
+      </SocialPill>
+    </nav>
+  </div>
+</div>
+
+
+
+
+

@@ -1,84 +1,74 @@
 ---
-import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
-import SocialPill from '../components/SocialPill.astro';
-import LinkedinIcon from '../icons/LinkedinIcon.astro';
-import GithubIcon from '../icons/GithubIcon.astro';
-import GmailIcon from '../icons/GmailIcon.astro';
-import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+
+import Home from '../components/Home.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Skills from '../components/Skills.astro';
+import Experiences from '../components/Experiences.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+
+import PersonIcon from '../icons/PersonIcon.astro';
 import CompanyIcon from '../icons/CompanyIcon.astro';
 import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
-import Project from '../components/Project.astro';
+import CodeIcon from '../icons/CodeIcon.astro';
+import ContractIcon from '../icons/ContractIcon.astro';
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout 
-	title="Portfolio Personal | Emanuel Barboza"
->
+<Layout title="Portfolio Personal | Emanuel Barboza" >
 	<main class="text-white px-4">
+		<!-- Esta es la seccion general de frente  -->
 		<SectionContainer class="py-44 pb-32">
-			<img 
-				class="size-17 mb-4 rounded-full object-cover" 
-				src="https://media.licdn.com/dms/image/v2/D4D03AQHAQhRn-Ru_kw/profile-displayphoto-shrink_400_400/B4DZaGnCKbHQAg-/0/1746015102108?e=2147483647&v=beta&t=JD5La1ReCgFSIfqRnXJUPsu1gl2rIW9tFYClFiM-b9Y" 
-				alt="Mi foto" 
-			/>
-			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 pb:6 lg:pb-10">
-				Hola 👋, soy Emanuel  
-				<a 
-					href="https://www.linkedin.com/in/emabarboza/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-				
-			</h1>
-			<h2 class=" text-xl lg:text-2xl opacity-80 text-wrap pb-4 max-w-[700px]">
-				<span>+8 años de experiencia.</span> 
-				<span class="text-yellow-200/90">
-					Soy un Informático de Argentina 🇦🇷,
-				</span> 
-				<span class="opacity-80">
-					con especialización en 
-					Metodologías Ágiles aplicadas en el Desarrollo de Software.
-				</span>  
-			</h2>
-			
-			<nav class="flex gap-4 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/emabarboza/">
-					<LinkedinIcon class="size-4 md:size-6"/>
-					Linkedin
-				</SocialPill>
-
-				<SocialPill href="https://github.com/emanuel-22">
-					<GithubIcon class="size-4 md:size-6"/>
-					Github
-				</SocialPill>
-
-				<SocialPill href="mailto:emanuelbarboza5@gmail.com">
-					<GmailIcon class="size-4 md:size-6"/>
-					emanuelbarboza5@gmail.com
-				</SocialPill>
-
-			</nav>
+			<Home/>
 		</SectionContainer>
 
-		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
-				<CompanyIcon class="size-8"/>
+		<!-- About Me  -->
+		<SectionContainer id="about-me">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center justify-center text-center">
+				<PersonIcon class="size-8" />
+				Acerca de mí
+			</h2>
+			<AboutMe/>
+		</SectionContainer>
+
+		<!-- Habilidades  -->
+		<SectionContainer id="skills">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center justify-center text-center">
+				<CodeIcon class="size-8" />
+				Habilidades
+			</h2>
+			<Skills/>
+		</SectionContainer>
+
+		<!-- Experiencia Laboral  -->
+		<SectionContainer id="experiences">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center justify-center text-center">
+				<CompanyIcon class="size-8" />
 				Experiencia Laboral
 			</h2>
-			<Experience/>
+			<Experiences />
 		</SectionContainer>
 
+		<!-- Proyectos  -->
 		<SectionContainer id="projects">
-			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center justify-center text-center">
 				<BriefCaseIcon class="size-8"/>
 				Proyectos
 			</h2>
-			<Project/>
+			<Projects/>
+		</SectionContainer>
+
+		<!-- Contacto  -->
+		<SectionContainer id="contact">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center justify-center text-center">
+				<ContractIcon class="size-8"/>
+				Contacto
+			</h2>
+			<Contact/>
 		</SectionContainer>
 
 	</main>
