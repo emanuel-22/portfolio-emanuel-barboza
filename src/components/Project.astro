@@ -1,0 +1,50 @@
+---
+import Reactjs from '../tags/Reactjs.astro';
+import Javascript from '../tags/Javascript.astro';
+
+const TAGS = {
+  REACT: { 
+    name: "React.js",
+    class: "bg-black text-white",
+    icon: Reactjs,
+  },
+  JAVASCRIPT: { 
+    name: "Javascript",
+    class: "bg-white text-black",
+    icon: Javascript,
+  },
+}
+const PROJECTS = [
+  {
+  
+    title: 'Luxus',
+    description: 
+    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
+    link: 'https://luxus.com.py/',
+    github: 'https://github.com/emanuel-22/AppReact_TodoTask',
+    image: '/projects/luxus.jpg',
+    tags: [ TAGS.JAVASCRIPT, TAGS.REACT]
+  }
+] 
+---
+
+{PROJECTS.map(({ title, description, tags, image }) => (
+  <article>
+    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+    <p class="text-lg mb-4 text-pretty">{description}</p>
+    <ul class="flex gap-x-4 flex-row">
+      {tags.map((tag, index) => (
+        <li>
+          <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+            <tag.icon class="size-4"/>
+            {tag.name}
+          </span>
+        </li> 
+      ))}
+    </ul>
+    <img 
+      class="rounded shadow-2xl shadow-white/10"
+      src={image} 
+      alt={`Captura de pantalla del proyecto ${title}`} />
+  </article>
+))}

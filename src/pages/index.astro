@@ -8,6 +8,8 @@ import GmailIcon from '../icons/GmailIcon.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import CompanyIcon from '../icons/CompanyIcon.astro';
+import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
+import Project from '../components/Project.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -16,13 +18,13 @@ import CompanyIcon from '../icons/CompanyIcon.astro';
 	title="Portfolio Personal | Emanuel Barboza"
 >
 	<main class="text-white px-4">
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer class="py-44 pb-32">
 			<img 
 				class="size-17 mb-4 rounded-full object-cover" 
 				src="https://media.licdn.com/dms/image/v2/D4D03AQHAQhRn-Ru_kw/profile-displayphoto-shrink_400_400/B4DZaGnCKbHQAg-/0/1746015102108?e=2147483647&v=beta&t=JD5La1ReCgFSIfqRnXJUPsu1gl2rIW9tFYClFiM-b9Y" 
 				alt="Mi foto" 
 			/>
-			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 pb:6 lg:pb-10">
 				Hola 👋, soy Emanuel  
 				<a 
 					href="https://www.linkedin.com/in/emabarboza/"
@@ -33,7 +35,7 @@ import CompanyIcon from '../icons/CompanyIcon.astro';
 				</a>
 				
 			</h1>
-			<h2 class="text-2xl opacity-80 text-wrap pb-4">
+			<h2 class=" text-xl lg:text-2xl opacity-80 text-wrap pb-4 max-w-[700px]">
 				<span>+8 años de experiencia.</span> 
 				<span class="text-yellow-200/90">
 					Soy un Informático de Argentina 🇦🇷,
@@ -44,19 +46,19 @@ import CompanyIcon from '../icons/CompanyIcon.astro';
 				</span>  
 			</h2>
 			
-			<nav class="flex gap-x-2">
+			<nav class="flex gap-4 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/emabarboza/">
-					<LinkedinIcon class="size-6"/>
+					<LinkedinIcon class="size-4 md:size-6"/>
 					Linkedin
 				</SocialPill>
 
 				<SocialPill href="https://github.com/emanuel-22">
-					<GithubIcon class="size-6"/>
+					<GithubIcon class="size-4 md:size-6"/>
 					Github
 				</SocialPill>
 
 				<SocialPill href="mailto:emanuelbarboza5@gmail.com">
-					<GmailIcon class="size-6"/>
+					<GmailIcon class="size-4 md:size-6"/>
 					emanuelbarboza5@gmail.com
 				</SocialPill>
 
@@ -64,11 +66,19 @@ import CompanyIcon from '../icons/CompanyIcon.astro';
 		</SectionContainer>
 
 		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold mb-8 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
 				<CompanyIcon class="size-8"/>
 				Experiencia Laboral
 			</h2>
 			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+				<BriefCaseIcon class="size-8"/>
+				Proyectos
+			</h2>
+			<Project/>
 		</SectionContainer>
 
 	</main>
