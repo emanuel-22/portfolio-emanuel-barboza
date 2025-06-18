@@ -1,0 +1,64 @@
+---
+import ModePage from '../icons/ModePage.astro';
+---
+
+<button 
+  id="theme-selector"
+  aria-label="Cambiar tema"
+  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm 
+  font-medium ring-offset-background transition-colors 
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 
+  disabled:pointer-events-none disabled:opacity-50 
+  [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 
+  border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10
+  bg-slate-300 dark:bg-slate-200 dark:text-slate-800 text-slate-200">
+  <ModePage />
+</button>
+
+<script>
+  const htmlElement = document.documentElement;
+  document.getElementById('theme-selector')?.addEventListener('click', () => {
+    console.log("estoy haciendo click")
+    console.log(localStorage.theme)
+    if (localStorage.theme === 'dark') {
+      localStorage.theme = 'light';
+      console.log("Lo reconoce como Dark")
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    }
+    else {
+      localStorage.theme = 'dark';
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    }
+    console.log(htmlElement)
+    // if (localStorage.theme === 'dark') {
+    //   localStorage.theme = 'light';
+    //   document.documentElement.classList.remove('dark');
+    // } else {
+    //   localStorage.theme = 'dark';
+    //   document.documentElement.classList.add('dark');
+    // }
+  });
+</script>
+
+
+		
+
+
+<!-- <script>
+  
+  const themeToggle = document.getElementById('toggle-theme');
+  const htmlElement = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark') {
+    htmlElement.classList.add('dark');
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark');
+    const newTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+  });
+
+</script> -->

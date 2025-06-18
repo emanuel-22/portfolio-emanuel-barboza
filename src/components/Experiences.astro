@@ -5,33 +5,51 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
   {
-    date: 'Abril 2025',
-    title: 'Full Stack Software Developer',
-    description: 
-    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
-    link: 'https://www.linkedin.com/in/emabarboza/'
+    date: 'Mayo 2021 - Abril 2025',
+    title: 'Full Stack Developer | Business Analyst',
+    company: 'Nuntius IT',
+    description: [
+      'Listar, relevar y análizar requerimientos del cliente para el desarrollo de una aplicación de canjes de puntos multi-rubros.',
+      'Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración.',
+      'Backend: Ruby on Rails, Turbo Rails y Python.',
+      'Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.',
+      'Identificar problemas, oportunidades y mejoras del proyecto.',
+      'Capacitación al cliente y usuarios pilotos para el uso de la aplicación web de canjes de puntos.',
+      'Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.'
+    ],
+    link: 'https://web.nuntius.tech/'
   },
   {
-    date: 'Abril 2025',
-    title: 'Full Stack Software Developer',
-    description: 
-    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
-    link: 'https://www.linkedin.com/in/emabarboza/'
+    date: 'Octubre 2024 - Marzo 2025',
+    title: 'Scrum Master | Agile Coach ',
+    company: 'Makisan Tech',
+    description: [    
+      'Facilitador asegurando la comunicación en el equipo y el cumplimiento de objetivos. ',
+      'Se optimizó el flujo de trabajo usando Scrum, para el desarrollo de un MVP de un sitio web de eventos en la Provincia de Salta.',
+      'Lider de un equipo multidisciplinario conformado por diseñador UX/UI, desarrollador front-end y desarrollador back-end adoptando buenas prácticas ágiles, reduciendo los bloqueos y mejorando el potencial del mismo.',
+      'Backend: Java, Sprint Boot y Hibernate.',
+      'Frontend: React y Javascript'
+    ],
+    link: 'https://www.makisantech.com.ar/'
   },
   {
-    date: 'Abril 2025',
-    title: 'Full Stack Software Developer',
-    description: 
-    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
-    link: 'https://www.linkedin.com/in/emabarboza/'
+    date: 'Junio 2020 - Junio 2021',
+    title: 'Software Developer',
+    company: 'Universidad Nacional de Salta',
+    description: [    
+      'Desarrollo de un sistema web para la gestión de información barrial en la Ciudad de Salta donde los encuestadores y supervisores de la Dirección General de Estadísticas (DGE) pudieran disponer de información actualizada y así tomar decisiones.',
+      'Tecnologías: PHP, Laravel, PostgreSql, Bootstrap y Apache.',
+      'Se realizaron tareas de relevamiento, análisis y diseño del sistema.'
+    ],
+    link: 'https://www.unsa.edu.ar/'
   }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">   
+<ol class="animate-fade-right animate-once animate-duration-[7000ms] relative border-s border-gray-400 dark:border-gray-700 ml-9">   
   {
     EXPERIENCE.map(experience => (
-      <li class="mb-10 ms-4">
+      <li class="mb-10 ms-8">
         <ExperienceItem {...experience}/>
       </li>
     ))

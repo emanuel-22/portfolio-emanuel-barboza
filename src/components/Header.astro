@@ -1,12 +1,21 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
 
-<header class="w-full text-white px-4 py-4">
+<header class="w-full text-gray-900 dark:text-white px-4 py-4">
   <div class="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6 xl:w-[1120px] mx-auto">
-    <nav class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 md:gap-x-8 text-sm md:text-base opacity-80">
+    <nav class="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 md:gap-x-9 text-sm md:text-base opacity-80">
       <a href="#about-me">Sobre mí</a>
       <a href="#skills">Habilidades</a>
       <a href="#experiences">Experiencias</a>
       <a href="#projects">Proyectos</a>
       <a href="#contact">Contacto</a>
     </nav>
+    <ThemeToggle />
   </div>
 </header>
+
+
+
+
+

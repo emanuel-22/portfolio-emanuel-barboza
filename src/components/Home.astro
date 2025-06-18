@@ -8,18 +8,18 @@ import WhatsAppIcon from '../icons/WhatsAppIcon.astro'
 import TypewriterText from '../components/TypewriterText.astro';
 
 ---
-
 <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto px-4 py-12">
   <!-- Imagen a la izquierda -->
   <img 
-    class="animate-fade animate-once animate-duration-[3000ms]  size-63 rounded-full object-cover overflow-hidden border-4 border-red-600/50 dark:border-gray-400 opacity-80" 
-    src="https://media.licdn.com/dms/image/v2/D4D03AQHAQhRn-Ru_kw/profile-displayphoto-shrink_400_400/B4DZaGnCKbHQAg-/0/1746015102108?e=2147483647&v=beta&t=JD5La1ReCgFSIfqRnXJUPsu1gl2rIW9tFYClFiM-b9Y" 
+    class="animate-fade animate-once animate-duration-[3000ms]  
+    size-60 rounded-full object-cover overflow-hidden border-4 border-red-700/90  opacity-80" 
+    src="/projects/photo_profile.png" 
     alt="My profile photo" 
   />
 
   <!-- Texto a la derecha -->
   <div>
-    <h1 class="animate-fade-right animate-once animate-duration-[3000ms] text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-4 pb-6">
+    <h1 class="animate-fade-right animate-once animate-duration-[3000ms] text-slate-800 dark:text-slate-200 text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-4 pb-6">
       Hola 👋, soy Emanuel Barboza
       <a 
         href="https://www.linkedin.com/in/emabarboza/"
@@ -29,12 +29,12 @@ import TypewriterText from '../components/TypewriterText.astro';
         <Badge>Disponible para trabajar</Badge>
       </a>
     </h1>
-    <h2 class="animate-fade-right animate-once animate-duration-[3000ms] text-xl lg:text-3xl opacity-80 pb-4 max-w-[700px]">   
-      <span class="text-yellow-200/90">
+    <h2 class="animate-fade-right animate-once animate-duration-[3000ms] text-xl lg:text-3xl opacity-90 pb-4 max-w-[700px]">   
+      <span class="text-red-700/90">
         <TypewriterText />
       </span> 
     </h2>
-    <h2 class="animate-fade-right animate-once animate-duration-[3000ms] text-xl lg:text-2xl opacity-80 pb-4 max-w-[700px]">
+    <h2 class="animate-fade-right animate-once animate-duration-[3000ms] text-slate-800 dark:text-slate-200 text-xl lg:text-2xl opacity-80 pb-4 max-w-[700px]">
       <span class="opacity-80">
         Especializado en Agilidad aplicado en Desarrollo de Software
       </span>  
@@ -43,22 +43,22 @@ import TypewriterText from '../components/TypewriterText.astro';
     <nav class="flex gap-4 flex-wrap">
       <SocialPill href="https://www.linkedin.com/in/emabarboza/">
         <LinkedinIcon class="size-4 md:size-6"/>
-        Linkedin
+        <span class="text-slate-800 dark:text-slate-200">Linkedin</span>  
       </SocialPill>
 
       <SocialPill href="https://github.com/emanuel-22">
-        <GithubIcon class="size-4 md:size-6"/>
-        Github
+        <GithubIcon class="size-4 md:size-6 text-slate-800 dark:text-slate-200"/>
+        <span class="text-slate-800 dark:text-slate-200">Github</span> 
       </SocialPill>
 
       <SocialPill href="mailto:emanuelbarboza5@gmail.com">
         <GmailIcon class="size-4 md:size-6"/>
-        emanuelbarboza5@gmail.com
+        <span class="text-slate-800 dark:text-slate-200">emanuelbarboza5@gmail.com</span>  
       </SocialPill>
       
       <SocialPill href="https://wa.me/5493874659911">
         <WhatsAppIcon class="size-4 md:size-6" />
-        Enviar WhatsApp
+        <span class="text-slate-800 dark:text-slate-200">Enviar WhatsApp</span> 
       </SocialPill>
     </nav>
   </div>

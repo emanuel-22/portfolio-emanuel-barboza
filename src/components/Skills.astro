@@ -4,6 +4,7 @@ import RubyIcon from '../skills/RubyIcon.astro';
 import LaravelIcon from '../skills/LaravelIcon.astro';
 import PythonIcon from '../skills/PythonIcon.astro';
 import JavascriptIcon from '../skills/JavascriptIcon.astro';
+import JavaIcon from '../skills/JavaIcon.astro';
 import ReactIcon from '../skills/ReactIcon.astro';
 import MicrosoftAzureIcon from '../skills/MicrosoftAzureIcon.astro';
 import DockerIcon from '../skills/DockerIcon.astro';
@@ -11,53 +12,102 @@ import BootstrapIcon from '../skills/BootstrapIcon.astro';
 import TailwindIcon from '../skills/TailwindIcon.astro';
 import PostgresqlIcon from '../skills/PostgresqlIcon.astro';
 import MysqlIcon from '../skills/MysqlIcon.astro';
+import JiraIcon from '../skills/JiraIcon.astro';
+import TrelloIcon from '../skills/TrelloIcon.astro';
+import VisualStudioCodeIcon from '../skills/VisualStudioCodeIcon.astro';
+import PostmanIcon from '../skills/PostmanIcon.astro';
+
 ---
 
 <div class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-5xl mx-auto px-3 py-16 opacity-80 ">
+  <div class="flex flex-col justify-between p-6 text-lg text-slate-800 dark:text-slate-200 leading-normal w-full ">
+  <p class="mb-6 font-normal">
+    Tengo experiencia con una amplia gama de tecnologías y herramientas que me permiten 
+    resolver problemas reales para desarrollar aplicaciones y sistemas software.  
+    Además, me baso en enfoques ágiles que me permiten mejorar mi trabajo con equipos.
+  </p>
+</div>
   <nav class="flex gap-4 flex-wrap">
-    <SocialPill>
-      <RubyIcon class="size-6 md:size-6"/>
-      Ruby
+
+    <SocialPill class="text-lg md:text-xl">
+      <RubyIcon class="size-8 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Ruby</span>
     </SocialPill>
-    <SocialPill>
-      <JavascriptIcon class="size-6 md:size-6"/>
-      Javascript
+    
+
+    <SocialPill class="text-lg md:text-xl">
+      <JavaIcon class="size-8 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Java</span> 
     </SocialPill>
-    <SocialPill>
-      <LaravelIcon class="size-6 md:size-6"/>
-      Laravel
+
+    <SocialPill class="text-lg md:text-xl">
+      <LaravelIcon class="size-8 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Laravel</span>
     </SocialPill>
-    <SocialPill>
-      <PythonIcon class="size-6 md:size-6"/>
-      Python
+
+    <SocialPill class="text-lg md:text-xl">
+      <PythonIcon class="size-8 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Python</span>
     </SocialPill>
-    <SocialPill>
-      <ReactIcon class="size-6 md:size-6"/>
-      React
+
+    <SocialPill class="text-lg md:text-xl">
+      <JavascriptIcon class="size-6 md:size-8"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Javascript</span>
     </SocialPill>
-    <SocialPill>
-      <BootstrapIcon class="size-6 md:size-6"/>
-      Bootstrap
+
+    <SocialPill class="text-lg md:text-xl">
+      <ReactIcon class="size-8 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">React</span>
     </SocialPill>
-    <SocialPill>
-      <TailwindIcon class="size-6 md:size-6"/>
-      Tailwind CSS
+
+    <SocialPill class="text-lg md:text-xl">
+      <BootstrapIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Bootstrap</span>
     </SocialPill>
-    <SocialPill>
-      <MicrosoftAzureIcon class="size-6 md:size-6"/>
-      Microsoft Azure
+
+    <SocialPill class="text-lg md:text-xl">
+      <TailwindIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Tailwind CSS</span> 
     </SocialPill>
-    <SocialPill>
-      <DockerIcon class="size-6 md:size-6"/>
-      Docker
+
+    <SocialPill class="text-lg md:text-xl">
+      <VisualStudioCodeIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Visual Studio Code</span>  
     </SocialPill>
-    <SocialPill>
-      <PostgresqlIcon class="size-6 md:size-6"/>
-      PostgreSQL
+    
+    <SocialPill class="text-lg md:text-xl">
+      <MicrosoftAzureIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Microsoft Azure</span>   
     </SocialPill>
-    <SocialPill>
-      <MysqlIcon class="size-6 md:size-6"/>
-      MySQL
+    
+    <SocialPill class="text-lg md:text-xl">
+      <DockerIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Docker</span>    
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <PostmanIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Postman</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <JiraIcon class="size-6 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Jira</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <TrelloIcon class="size-6 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Trello</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <PostgresqlIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">PostgreSQL</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <MysqlIcon class="size-6 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">MySQL</span> 
     </SocialPill>
   </nav>
 </div>

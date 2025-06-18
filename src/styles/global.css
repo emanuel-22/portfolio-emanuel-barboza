@@ -2,4 +2,6 @@
 
 @import "tailwindcss-animated";
 
-@import "@midudev/tailwind-animations";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
