@@ -1,109 +1,203 @@
 ---
-import Reactjs from '../tags/Reactjs.astro';
-import Javascript from '../tags/Javascript.astro';
 
-const TAGS = {
-  REACT: { 
-    name: "React.js",
-    class: "bg-black text-white",
-    icon: Reactjs,
-  },
-  JAVASCRIPT: { 
-    name: "Javascript",
-    class: "bg-white text-black",
-    icon: Javascript,
-  },
-}
 const PROJECTS = [
   {
-  
-    title: 'Luxus',
+    title: 'Sitio web para publicación de Eventos en Provincia de Salta',
     description: 
-    '- Desarrollo de un sistema integral de gestión Luxus que cubre las áreas claves del negocio como finanzas, operaciones, comercial, importación y administración utilizando: - Backend: Ruby on Rails, Turbo Rails y Python. - Frontend: Nodejs, HTML, Bootstrap, Tailwind, JavaScript, Typescript y CSS.- Aplicación de Scrum, Docker, Azure, Gitlab, Visual Studio Code, Miro y Jira.',
-    link: 'https://luxus.com.py/',
-    github: 'https://github.com/emanuel-22/AppReact_TodoTask',
-    image: '/projects/luxus.jpg',
-    tags: [ TAGS.JAVASCRIPT, TAGS.REACT]
+    'El proyecto Eventos SaltaFan de Makisan Tech consistió en desarrollar una plataforma web que centralice la' +
+    'promoción y gestión de eventos en la provincia de Salta. La página estuvo dirigida a un público amplio,'+
+    'abarcando desde los fanáticos de la cultura geek y friki, hasta personas interesadas en conciertos,'+
+    ' exposiciones culturales, eventos deportivos, ferias y más. La idea fue facilitar el acceso a la información '+
+    'de eventos relevantes, ofrecer la compra de entradas (funcionalidad a definir a futuro), y crear una comunidad'+ 
+    'que fomente la participación en las actividades locales.',
+    link: '',
+    github: 'https://github.com/MakisanProjects/SaltaFan',
+    image: '/projects/project1.jpg'
+  },
+  {
+    title: 'Sistema de gestión para instituto con educación domiciliaria y hospitalaria de Salta',
+    description: 
+    'Mi tesis de grado se enfoca en desarrollar un sistema de gestión mediante la aplicación de conceptos teóricos,'+
+    'métodos, técnicas y herramientas que ofrece el marco de trabajo SCRUM para el desarrollo de un sistema software.'+
+    'En este caso en particular para el Instituto Especial N° 7215 que trabaja de manera domiciliaria y hospitalaria.'+
+    'El software de gestión le permitirá administrar, organizar, comunicar, planificar y relevar información de manera'+
+    'más eficiente. Los usuarios del sistema serán diferentes usuarios de la pirámide organización como ser: el director,'+
+    'coordinador general, coordinador de hospitales, coordinador de administración, coordinador de pedagogía y profesores.',
+    link: '',
+    github: 'https://gitlab.com/emanuel-22/instituto-dyh',
+    image: '/projects/project2.jpg'
+  },
+  {
+    title: 'Sistema web para la gestión de información barrial',
+    description: 
+    'Un proyecto de la Secretaria de Estadísticas y Censos de Salta que dispone de la información precisa y actualizada de los barrios de la ciudad de Salta'+
+    'Desde la (DGE), se planteó la necesidad de disponer de un sistema informático que visualice dicha información para así poder tomar decisiones que permitan'+
+    'llevar adelante Censos Poblacionales, Censos Agropecuarios, Censos Económicos, Encuestas y Actualizaciones Cartográficas, '+
+    'obteniendo como resultado la mejora del trabajo en campo de los Encuestadores, Supervisores, permitiendo mejorar y optimizar '+
+    'la calidad de la información y la tarea relevamiento en campo.',
+    link: '',
+    github: 'https://gitlab.com/emanuel-22/proyecto_estadistica_censo',
+    image: '/projects/project3.jpg'
+  },
+  {
+    title: 'Plataforma para el reconocimiento e interpretación automatizados de textos manuscritos históricos',
+    description: 
+    'Proyecto relacionado a Metodologías y Herramientas automáticas e interactivas para la Recuperación de Información'+
+    ' mediante Esquemas de Relevancia. Esta propuesta tuvo como objetivo el desarrollo de mecanismos de extracción'+
+    ' y reconocimiento de texto en manuscritos históricos. Se enmarcó en un conjunto de tareas vinculadas a Recuperación de'+
+    'Información, Minería de Textos y Procesamiento del Lenguaje Natural en textos históricos. Como parte del proceso de '+
+    'extracción de la información contenida en estos volúmenes, se desarrolló y implemento mecanismos novedosos de lectura'+
+    ' automatizada de manuscritos. Si bien existen métodos y marcos de trabajo para la realización de esta tarea, también' +
+    'surgen dificultades específicas del contexto que afectan la precisión que puede obtenerse mediante los procesos tradicionales'+ 
+    'de Reconocimiento Óptico de Caracteres.',
+    link: '',
+    github: '',
+    image: '/projects/project4.jpg'
+  },
+  {
+    title: 'Reconocimiento de Emociones usando Multilayer Perceptron Neural Network (MLP)',
+    description: 
+    'El reconocimiento automático de emociones en personas es un tema de interés en el'+
+    ' área de visión por computadora debido a sus potenciales aplicaciones, tales como:'+
+    'Interacción humano-máquina, evaluación del dolor en atención médica, detección de engaños,'+
+    'seguimiento de comportamiento en niños, entre otros.'+
+    'En este trabajo final se propone desarrollar un prototipo capaz de realizar reconocimiento'+
+    ' de emociones en imágenes utilizando un enfoque de redes neuronales tradicionales multicapa. '+
+    'las redes neuronales son una temática y un campo bastante interesante e importante dentro de'+
+    ' la inteligencia artificial. Son inspiradas en el comportamiento del cerebro humano,'+
+    ' especialmente entre las neuronas y las conexiones. Investigadores y desarrolladores'+
+    ' crean modelos artificiales que solucionan problemas que son difíciles de resolver '+
+    'mediante otras técnicas algorítmicas, así nace los llamados sistemas expertos o inteligentes.',
+    link: '',
+    github: 'https://github.com/emanuel-22/Reconocimiento-Emociones-con-MLP',
+    image: '/projects/project5.jpg'
+  },
+  {
+    title: 'Content Based Image Retrieval (CBIR)',
+    description: 
+    'Por cada segundo se suben centenares de imágenes que hacen referencia a artículos para el consumo'+
+    'a través de sitios especializados de e-commerce o de cualquier otra clase en particular, como redes sociales. '+
+    'El objetivo del presente trabajo es crear un motor debúsqueda y recuperación de imágenes,' +
+    ' aplicando determinadas técnicas de procesamiento de imágenes en donde en vez de realizar una consulta a'+
+    ' través de texto, se realice con una imagen. Es decir buscar una imagen de una colección' +
+    ' de imágenes usando otra imagen. Un CBIR (Content- based Image Retrieval) es un sistemade búsqueda para recuperar imágenes'+
+    ' o simplemente unmotor de búsqueda de imágenes, en base al contenidocomo ser colores, figuras, texturas o cualquier tipo de información'+
+    ' que derive de la propia imagen.',
+    link:'',
+    github: 'https://github.com/emanuel-22/CBIR',
+    image: '/projects/project6.jpg'
   }
 ] 
 ---
 
-<div id="indicators-carousel" class="relative w-full" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-      <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-          <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 5 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
+<p class="text-center mb-4 font-normal text-slate-800 dark:text-slate-200">
+  Te muestro algunos de mis proyectos recientes que demuestran mis habilidades y experiencia en roles <br />
+  como Scrum Master, Full Stack Developer y Business Analyst.
+</p>
+
+<div class="relative w-full flex flex-col items-center py-6 overflow-hidden">
+  <!-- Botones -->
+  <div class="flex gap-4 mt-2 mb-7">
+    <button id="prev"
+      class="bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded shadow hover:scale-105">‹</button>
+    <button id="next"
+      class="bg-white dark:bg-gray-700 text-black dark:text-white px-4 py-2 rounded shadow hover:scale-105">›</button>
+  </div>
+
+  <div class="w-full max-w-5xl px-4 overflow-hidden mx-auto">
+    <div
+      id="carousel-container"
+      class="flex transition-transform duration-500 ease-in-out"
+      style="transform: translateX(0);"
+    >
+      {PROJECTS.map((project, i) => (
+        <div
+          class="flex-shrink-0 w-full sm:w-[45%] mx-4 transition-all duration-300"
+          data-index={i}
+        >
+          <div class="bg-white dark:bg-gray-900 rounded-xl shadow-xl overflow-hidden w-full">
+            <img src={project.image} alt={project.title}
+              class="w-full h-64 sm:h-80 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">{project.title}</h3>
+              <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">{project.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0">0</button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1">1</button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2">2</button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3">3</button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4">4</button>
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
+  </div>
 </div>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("carousel-container");
+  if (!container) return;
 
+  const cards = Array.from(container.children) as HTMLElement[];;
+  let currentIndex = 0;
 
+  function getCardWidth() {
+    return cards[0].offsetWidth + 32; // ancho + margen horizontal
+  }
 
+  function updateCarousel() {
+    const cardWidth = getCardWidth();
 
+    // Ahora currentIndex se asegura circular con módulo
+    const total = cards.length;
+    // Limitar para que currentIndex esté en 0..total-1
+    currentIndex = ((currentIndex % total) + total) % total;
 
+    // Calcular offset para desplazar cards
+    // Como mostramos 2 cards, el offset debe permitir "volver" al principio
+    // Para evitar que se pase del final, calculamos el máximo offset
+    const maxIndex = total - 2; // porque mostramos 2 cards
+    // Si currentIndex pasa de maxIndex, en vez de desplazar más, dejamos que se muestre el final
+    // Pero para circular se usa modulo, así que en el último caso mostramos la última dupla o la primera dupla.
 
+    // Para que funcione bien el loop, vamos a ajustar el offset así:
+    let offset;
+    if (currentIndex > maxIndex) {
+      // Si estamos en el último o más allá, mostramos el último grupo de 2 cards
+      offset = cardWidth * maxIndex;
+    } else {
+      offset = cardWidth * currentIndex;
+    }
+    if (container) {
+      container.style.transform = `translateX(-${offset}px)` ;
+    }
+    
+    // Actualizar clases para escala y opacidad
+    cards.forEach((card, index) => {
+      card.classList.add("scale-90", "opacity-60");
+      card.classList.remove("scale-100", "opacity-100");
+    });
 
-<!-- {PROJECTS.map(({ title, description, tags, image }) => (
-  <article>
-    <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-    <p class="text-lg mb-4 text-pretty">{description}</p>
-    <ul class="flex gap-x-4 flex-row">
-      {tags.map((tag, index) => (
-        <li>
-          <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-            <tag.icon class="size-4"/>
-            {tag.name}
-          </span>
-        </li> 
-      ))}
-    </ul>
-    <img 
-      class="rounded shadow-2xl shadow-white/10"
-      src={image} 
-      alt={`Captura de pantalla del proyecto ${title}`} />
-  </article>
-))} -->
+    // Card activa (más grande)
+    cards[currentIndex].classList.remove("scale-90", "opacity-60");
+    cards[currentIndex].classList.add("scale-100", "opacity-100");
+
+    // Siguiente card visible (más pequeña)
+    if (cards[(currentIndex + 1) % total]) {
+      cards[(currentIndex + 1) % total].classList.remove("scale-100", "opacity-100");
+      cards[(currentIndex + 1) % total].classList.add("scale-90", "opacity-80");
+    }
+  }
+
+  document.getElementById("prev")?.addEventListener('click', () => {
+    currentIndex--;
+    updateCarousel();
+  });
+
+  document.getElementById("next")?.addEventListener('click', () => {
+    currentIndex++;
+    updateCarousel();
+  });
+
+  updateCarousel();
+  window.addEventListener("resize", updateCarousel);
+});
+
+</script>

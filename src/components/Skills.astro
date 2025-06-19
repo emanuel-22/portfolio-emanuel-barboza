@@ -14,19 +14,23 @@ import PostgresqlIcon from '../skills/PostgresqlIcon.astro';
 import MysqlIcon from '../skills/MysqlIcon.astro';
 import JiraIcon from '../skills/JiraIcon.astro';
 import TrelloIcon from '../skills/TrelloIcon.astro';
+import AstroIcon from '../skills/AstroIcon.astro';
+import RedisIcon from '../skills/RedisIcon.astro';
+import MongoDBIcon from '../skills/MongoDBIcon.astro';
+
 import VisualStudioCodeIcon from '../skills/VisualStudioCodeIcon.astro';
 import PostmanIcon from '../skills/PostmanIcon.astro';
 
 ---
 
-<div class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-5xl mx-auto px-3 py-16 opacity-80 ">
+<div class="animate-jump-in animate-once animate-duration-[5000ms] animate-ease-linear flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 max-w-5xl mx-auto px-3 py-8 md:py-3 opacity-80 mb-8 md:mb-12">
   <div class="flex flex-col justify-between p-6 text-lg text-slate-800 dark:text-slate-200 leading-normal w-full ">
-  <p class="mb-6 font-normal">
-    Tengo experiencia con una amplia gama de tecnologías y herramientas que me permiten 
-    resolver problemas reales para desarrollar aplicaciones y sistemas software.  
-    Además, me baso en enfoques ágiles que me permiten mejorar mi trabajo con equipos.
-  </p>
-</div>
+    <p class="mb-2 font-normal">
+      Tengo experiencia con una amplia gama de tecnologías y herramientas que me permiten 
+      resolver problemas reales para desarrollar aplicaciones y sistemas software.  
+      Además, me baso en enfoques ágiles que me permiten mejorar mi trabajo con equipos.
+    </p>
+  </div>
   <nav class="flex gap-4 flex-wrap">
 
     <SocialPill class="text-lg md:text-xl">
@@ -71,6 +75,11 @@ import PostmanIcon from '../skills/PostmanIcon.astro';
     </SocialPill>
 
     <SocialPill class="text-lg md:text-xl">
+      <AstroIcon class="size-6 md:size-9"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Astro</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
       <VisualStudioCodeIcon class="size-6 md:size-9"/>
       <span class="self-center text-slate-800 dark:text-slate-200">Visual Studio Code</span>  
     </SocialPill>
@@ -109,6 +118,17 @@ import PostmanIcon from '../skills/PostmanIcon.astro';
       <MysqlIcon class="size-6 md:size-10"/>
       <span class="self-center text-slate-800 dark:text-slate-200">MySQL</span> 
     </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <RedisIcon class="size-6 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Redis</span> 
+    </SocialPill>
+
+    <SocialPill class="text-lg md:text-xl">
+      <MongoDBIcon class="size-6 md:size-10"/>
+      <span class="self-center text-slate-800 dark:text-slate-200">Mongo DB</span> 
+    </SocialPill>
+
   </nav>
 </div>
 

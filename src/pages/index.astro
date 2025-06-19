@@ -5,6 +5,7 @@ import SectionContainer from '../components/SectionContainer.astro';
 import Home from '../components/Home.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Skills from '../components/Skills.astro';
+import Services from '../components/Services.astro';
 import Experiences from '../components/Experiences.astro';
 import Projects from '../components/Projects.astro';
 import Contact from '../components/Contact.astro';
@@ -14,6 +15,8 @@ import CompanyIcon from '../icons/CompanyIcon.astro';
 import BriefCaseIcon from '../icons/BriefCaseIcon.astro';
 import CodeIcon from '../icons/CodeIcon.astro';
 import ContractIcon from '../icons/ContractIcon.astro';
+import DeviceCheckIcon from '../icons/DeviceCheckIcon.astro';
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -33,7 +36,7 @@ import ContractIcon from '../icons/ContractIcon.astro';
 				<PersonIcon class="size-8" />
 				Acerca de mí
 			</h2>
-			<AboutMe/>
+			<AboutMe />
 		</SectionContainer>
 
 		<!-- Habilidades  -->
@@ -43,6 +46,15 @@ import ContractIcon from '../icons/ContractIcon.astro';
 				Habilidades
 			</h2>
 			<Skills/>
+		</SectionContainer>
+
+		<!-- Habilidades  -->
+		<SectionContainer id="services">
+			<h2 class="text-3xl text-slate-800 dark:text-slate-200 font-semibold mb-10 flex gap-x-3 items-center justify-center text-center">
+				<DeviceCheckIcon class="size-8" />
+				Mis Servicios
+			</h2>
+			<Services/>
 		</SectionContainer>
 
 		<!-- Experiencia Laboral  -->

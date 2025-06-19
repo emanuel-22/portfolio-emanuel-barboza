@@ -16,13 +16,9 @@ import ModePage from '../icons/ModePage.astro';
 </button>
 
 <script>
-  const htmlElement = document.documentElement;
   document.getElementById('theme-selector')?.addEventListener('click', () => {
-    console.log("estoy haciendo click")
-    console.log(localStorage.theme)
     if (localStorage.theme === 'dark') {
       localStorage.theme = 'light';
-      console.log("Lo reconoce como Dark")
       document.documentElement.classList.remove('dark');
       document.documentElement.classList.add('light');
     }
@@ -31,14 +27,6 @@ import ModePage from '../icons/ModePage.astro';
       document.documentElement.classList.remove('light');
       document.documentElement.classList.add('dark');
     }
-    console.log(htmlElement)
-    // if (localStorage.theme === 'dark') {
-    //   localStorage.theme = 'light';
-    //   document.documentElement.classList.remove('dark');
-    // } else {
-    //   localStorage.theme = 'dark';
-    //   document.documentElement.classList.add('dark');
-    // }
   });
 </script>
 
