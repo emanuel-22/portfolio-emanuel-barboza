@@ -126,6 +126,8 @@
         email: (data.namedItem("email") as HTMLInputElement)?.value || "",
         subject: (data.namedItem("subject") as HTMLInputElement)?.value || "",
         message: (data.namedItem("message") as HTMLTextAreaElement)?.value || "",
+        "form-name": "contact", // ¡IMPORTANTE! Asegúrate de incluir el nombre del formulario aquí
+        "bot-field": "", // Incluye también el campo honeypot si lo estás usando
       };
 
       try {
@@ -136,6 +138,9 @@
           headers: { "Content-Type": "application/x-www-form-urlencoded" }, // Importante para Netlify
           body: new URLSearchParams(formData).toString(), // Convierte el objeto a formato URL-encoded
         });
+
+        console.log("¡Mensaje enviado! Gracias por contactarte, responderé pronto.");
+
 
         form.reset(); // Limpia los campos del formulario
         alert("¡Mensaje enviado! Gracias por contactarte, responderé pronto."); // Muestra el mensaje del navegador
