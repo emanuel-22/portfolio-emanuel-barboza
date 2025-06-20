@@ -5,8 +5,8 @@
 
 <div class="animate-fade animate-once animate-duration-[9000ms] isolate px-6 pt-3 pb-9 sm:pt-2 sm:pb-2 lg:px-8 mb-2">
 
-  <form id="contact-form" method="POST" data-netlify="true" name="contact" class="mx-auto mt-6 max-w-xl sm:mt-8">
-    <input type="hidden" name="form-name" value="contacto" />
+  <form id="contact-form" method="POST" data-netlify="true" name="contact" netlify-honeypot="bot-field" class="mx-auto mt-6 max-w-xl sm:mt-8">
+    <input type="hidden" name="form-name" value="contact" />
 
     <p hidden>
       <label>No llenar: <input name="bot-field" /></label>
@@ -100,52 +100,33 @@
   </form>
 </div>
 
-<div id="popup" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-sm">
-    <h2 class="text-lg font-semibold text-gray-900 dark:text-white">¡Mensaje enviado!</h2>
-    <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">
-      Gracias por contactarte, responderé pronto.
-    </p>
-    <button
-      type="button"
-      id="close-popup" class="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">
-      Cerrar
-    </button>
-  </div>
-</div>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-  const popup = document.getElementById("popup");
-  const closeBtn = document.getElementById("close-popup");
+    const form = document.getElementById("contact-form");
 
-  // Type checking for TypeScript, helpful but not strictly necessary for plain JS
-  if (!(form instanceof HTMLFormElement) || !(popup instanceof HTMLDivElement) || !(closeBtn instanceof HTMLButtonElement)) {
-      console.error("One or more elements not found. Form, popup, or close button.");
-      return;
-  }
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Previene el envío por defecto del formulario
-
-    const data = new FormData(form);
-
-    try {
-      await fetch("/", {
-        method: "POST",
-        body: data,
-      });
-      form.reset(); // Limpia los campos del formulario
-      popup.classList.remove("hidden"); // Muestra el modal de éxito
-    } catch (error) {
-      alert("Hubo un error al enviar el mensaje: " + error.message);
+    // Verificación de tipo para asegurar que 'form' es un elemento HTMLFormElement
+    if (!(form instanceof HTMLFormElement)) {
+        console.error("El elemento del formulario no fue encontrado.");
+        return;
     }
-  });
 
-  closeBtn.addEventListener("click", () => {
-      popup.classList.add("hidden"); // Oculta el modal
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault(); // Evita que la página se recargue
+
+      const data = new FormData(form);
+
+      try {
+        // Envía los datos del formulario a Netlify
+        await fetch("/", {
+          method: "POST",
+          body: data,
+        });
+
+        form.reset(); // Limpia los campos del formulario
+        alert("¡Mensaje enviado! Gracias por contactarte, responderé pronto."); // Muestra el mensaje del navegador
+      } catch (error) {
+        alert("Hubo un error al enviar el mensaje: " + error.message);
+      }
     });
   });
 </script>
