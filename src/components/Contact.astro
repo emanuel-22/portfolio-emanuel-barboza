@@ -14,11 +14,11 @@
 
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div>
-        <label for="first-name" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+        <label for="firstname" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
           Primer Nombre
         </label>
         <div class="mt-2.5">
-          <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+          <input type="text" name="firstname" id="firstname" autocomplete="given-name"
           class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
           outline-1 -outline-offset-1  outline-gray-300 placeholder:text-gray-400
           focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Juan" />
@@ -26,11 +26,11 @@
       </div>
 
       <div>
-        <label for="last-name" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+        <label for="lastname" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
           Apellido
         </label>
         <div class="mt-2.5">
-          <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+          <input type="text" name="lastname" id="lastname" autocomplete="family-name"
           class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
           outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400
           focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Perez" />
@@ -38,14 +38,14 @@
       </div>
 
       <div class="sm:col-span-2">
-        <label for="phone-number" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+        <label for="phonenumber" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
           Teléfono
         </label>
         <div class="mt-2.5">
           <div class="flex rounded-md bg-white dark:bg-gray-200 outline-1 -outline-offset-1
           outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2
           has-[input:focus-within]:outline-indigo-300">
-            <input type="text" name="phone-number" id="phone-number"
+            <input type="text" name="phonenumber" id="phonenumber"
             class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900
             placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="+54 9 1111132222" />
           </div>
@@ -101,32 +101,84 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contact-form");
 
-    // Verificación de tipo para asegurar que 'form' es un elemento HTMLFormElement
-    if (!(form instanceof HTMLFormElement)) {
-        console.error("El elemento del formulario no fue encontrado.");
-        return;
-    }
+  const form = document.getElementById("contact");
+  if (form){
+    var xhr = new XMLHttpRequest();
+    const handleFormSubmission = (event) => {
+      // prevent page from reloading
+      event.preventDefault();
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault(); // Evita que la página se recargue
+      const data = event.target.elements;
 
-      const data = new FormData(form);
+      const formData = {
+        firstname: data.firstname.value,
+        lastname: data.lastname.value,
+        phonenumber: data.phonenumber.value,
+        email: data.email.value,
+        subject: data.subject.value,
+        message: data.message.value,
+      };
 
-      try {
-        // Envía los datos del formulario a Netlify
-        await fetch("/", {
-          method: "POST",
-          body: data,
-        });
+      // Set POST request method to our netlify function
+      xhr.open("POST", ".netlify/functions/contact");
 
-        form.reset(); // Limpia los campos del formulario
-        alert("¡Mensaje enviado! Gracias por contactarte, responderé pronto."); // Muestra el mensaje del navegador
-      } catch (error) {
-        alert("Hubo un error al enviar el mensaje: " + error.message);
-      }
-    });
-  });
+      // Set the request headers
+      xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+      // Send the data as JSON to our netlify function
+      xhr.send(JSON.stringify(formData));
+
+      // Handle the response
+      xhr.onload = function () {
+        const response = JSON.parse(xhr.responseText);
+
+        if (xhr.status === 200) {
+          // The request was successful
+          console.log("success");
+          
+          alert("¡Mensaje enviado! Gracias por contactarte, responderé pronto."); // Muestra el mensaje del navegador
+        } else {
+          // The request failed
+          console.log("fail");
+          alert("Hubo un error al enviar el mensaje" );
+        }
+      };
+    };
+
+    // add the submission event listener
+    form.addEventListener("submit", handleFormSubmission, true);
+
+  }
+  
+
+
+  // document.addEventListener("DOMContentLoaded", () => {
+  //   const form = document.getElementById("contact-form");
+
+  //   // Verificación de tipo para asegurar que 'form' es un elemento HTMLFormElement
+  //   if (!(form instanceof HTMLFormElement)) {
+  //       console.error("El elemento del formulario no fue encontrado.");
+  //       return;
+  //   }
+
+  //   form.addEventListener("submit", async (event) => {
+  //     event.preventDefault(); // Evita que la página se recargue
+
+  //     const data = new FormData(form);
+
+  //     try {
+  //       // Envía los datos del formulario a Netlify
+  //       await fetch("/", {
+  //         method: "POST",
+  //         body: data,
+  //       });
+
+  //       form.reset(); // Limpia los campos del formulario
+  //       alert("¡Mensaje enviado! Gracias por contactarte, responderé pronto."); // Muestra el mensaje del navegador
+  //     } catch (error) {
+  //       alert("Hubo un error al enviar el mensaje: " + error.message);
+  //     }
+  //   });
+  // });
 </script>
