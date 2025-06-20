@@ -9,8 +9,7 @@
     name="contact"
     method="POST"
     action="/" 
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
+    netlify
     class="mx-auto mt-6 max-w-xl sm:mt-8"
   >
     <input type="hidden" name="form-name" value="contacto" />
@@ -136,8 +135,10 @@
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault(); // Prevent default form submission and page reload
-
+      console.log("Estoy por mandar")
+    
       const data = new FormData(form);
+      console.log(data)
       // Netlify requires the form-name field to be present in the submission
       // even if it's hidden. FormData handles this automatically.
 
