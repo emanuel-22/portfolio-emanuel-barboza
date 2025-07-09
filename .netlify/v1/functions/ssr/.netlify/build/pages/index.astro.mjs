@@ -421,19 +421,19 @@ const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<p class="text-center mb-1 font-normal text-slate-800 dark:text-slate-200">
 Aprendamos unos de otros, me gustaría brindar mis conocimientos, seguir <br>
 adquiriendo experiencia y hacer mejores proyectos. ¡No dudes en contactarnos!
-</p> <div class="animate-fade animate-once animate-duration-[9000ms] isolate px-6 pt-3 pb-9 sm:pt-2 sm:pb-2 lg:px-8 mb-2"> <form id="contact-form" method="POST" data-netlify="true" name="contact" netlify-honeypot="bot-field" class="mx-auto mt-6 max-w-xl sm:mt-8"> <input type="hidden" name="form-name" value="contact"> <p hidden> <label>No llenar: <input name="bot-field"></label> </p> <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"> <div> <label for="first-name" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+</p> <div class="animate-fade animate-once animate-duration-[9000ms] isolate px-6 pt-3 pb-9 sm:pt-2 sm:pb-2 lg:px-8 mb-2"> <form id="contact-form" method="POST" name="contact-form" class="mx-auto mt-6 max-w-xl sm:mt-8" netlify> <input type="hidden" name="form-name" value="contact"> <p hidden> <label>No llenar: <input name="bot-field"></label> </p> <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"> <div> <label for="firstname" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
 Primer Nombre
-</label> <div class="mt-2.5"> <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
+</label> <div class="mt-2.5"> <input type="text" name="firstname" id="firstname" autocomplete="given-name" class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
           outline-1 -outline-offset-1  outline-gray-300 placeholder:text-gray-400
-          focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Juan"> </div> </div> <div> <label for="last-name" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+          focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Juan"> </div> </div> <div> <label for="lastname" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
 Apellido
-</label> <div class="mt-2.5"> <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
+</label> <div class="mt-2.5"> <input type="text" name="lastname" id="lastname" autocomplete="family-name" class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
           outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400
-          focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Perez"> </div> </div> <div class="sm:col-span-2"> <label for="phone-number" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
+          focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-300" placeholder="Perez"> </div> </div> <div class="sm:col-span-2"> <label for="phonenumber" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
 Teléfono
 </label> <div class="mt-2.5"> <div class="flex rounded-md bg-white dark:bg-gray-200 outline-1 -outline-offset-1
           outline-gray-300 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2
-          has-[input:focus-within]:outline-indigo-300"> <input type="text" name="phone-number" id="phone-number" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900
+          has-[input:focus-within]:outline-indigo-300"> <input type="text" name="phonenumber" id="phonenumber" class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900
             placeholder:text-gray-400 focus:outline-none sm:text-sm/6" placeholder="+54 9 1111132222"> </div> </div> </div> <div class="sm:col-span-2"> <label for="email" class="block text-sm/6 font-semibold text-slate-800 dark:text-slate-200">
 Email
 </label> <div class="mt-2.5"> <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md bg-white dark:bg-gray-200 px-3.5 py-2 text-base text-gray-900
